@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mirror Work - 21 Days</title>
+    <style>
+        /* Basic Reset & Body Styling */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        /* Container */
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px 30px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #5a3d8a; /* Purple tone */
+            margin-bottom: 10px;
+        }
+
+        .intro {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        /* Week Styling */
+        .week {
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden; /* Contain border-radius */
+        }
+
+        .week-toggle {
+            width: 100%;
+            background-color: #e7e7e7;
+            color: #5a3d8a;
+            border: none;
+            padding: 15px 20px;
+            text-align: left;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            position: relative; /* For pseudo-element */
+        }
+
+        .week-toggle:hover {
+            background-color: #dcdcdc;
+        }
+
+        .week-toggle::after {
+            content: '+'; /* Indicator */
+            position: absolute;
+            right: 20px;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+
+        .week-toggle.active::after {
+            content: '−'; /* Change indicator when active */
+        }
+
+
+        .week-content {
+            display: none; /* Hidden by default */
+            padding: 0;
+            background-color: #fff;
+        }
+
+        /* Day Styling */
+        .day {
+            border-top: 1px dashed #eee;
+            margin: 0;
+        }
+        .day:first-child {
+            border-top: none;
+        }
+
+        .day-toggle {
+            width: 100%;
+            background-color: #f8f8f8;
+            color: #444;
+            border: none;
+            padding: 12px 20px 12px 35px; /* Indent day toggle */
+            text-align: left;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+             position: relative; /* For pseudo-element */
+        }
+
+        .day-toggle:hover {
+            background-color: #efefef;
+        }
+
+        .day-toggle::after {
+            content: '+'; /* Indicator */
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-weight: normal;
+            color: #888;
+            transition: transform 0.3s ease;
+        }
+
+        .day-toggle.active::after {
+            content: '−'; /* Change indicator when active */
+        }
+
+        .day-content {
+            display: none; /* Hidden by default */
+            padding: 15px 25px 20px 40px; /* Indent content */
+            border-top: 1px solid #eee;
+            background-color: #fff;
+        }
+
+        /* Exercise Content Styling */
+        .day-content h3 {
+            color: #5a3d8a;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #eee;
+        }
+        .day-content h3:first-child {
+            margin-top: 0;
+        }
+
+        .day-content p,
+        .day-content ol {
+            margin-bottom: 15px;
+        }
+
+        .day-content ol {
+            padding-left: 25px; /* Indent list items */
+        }
+
+        .day-content li {
+            margin-bottom: 8px;
+        }
+
+        .day-content em {
+            font-style: italic;
+            color: #555;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+            .week-toggle {
+                padding: 12px 15px;
+                font-size: 1.1em;
+            }
+             .week-toggle::after {
+                right: 15px;
+            }
+            .day-toggle {
+                padding: 10px 15px 10px 25px;
+                font-size: 1em;
+            }
+             .day-toggle::after {
+                right: 15px;
+            }
+            .day-content {
+                 padding: 15px 20px 15px 30px;
+            }
+            .day-content ol {
+                padding-left: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Mirror Work: 21 Days to Heal Your Life</h1>
+        <p class="intro">Exercises by Louise Hay</p>
+
+        <!-- WEEK 1 -->
+        <div class="week">
+            <button class="week-toggle">Week 1</button>
+            <div class="week-content">
+
+                <!-- Day 1 -->
+                <div class="day">
+                    <button class="day-toggle">Day 1: Loving Yourself</button>
+                    <div class="day-content">
+                        <h3>Your Day 1 Mirror Work Exercise</h3>
+                        <ol>
+                            <li>Stand or sit in front of your bathroom mirror.</li>
+                            <li>Look into your eyes.</li>
+                            <li>Take a deep breath and say this affirmation: <em>I want to like you. I want to really learn to love you. Let’s go for it and really have some fun.</em></li>
+                            <li>Take another deep breath and say, <em>I’m learning to really like you. I’m learning to really love you.</em></li>
+                            <li>This is the first exercise, and I know it can be a little challenging, but please stay with it. Keep taking deep breaths. Look into your eyes. Use your own name as you say, <em>I’m willing to learn to love you, [Name]. I’m willing to learn to love you.</em></li>
+                            <li>Throughout the day, each time you pass a mirror or see your reflection, please repeat these affirmations, even if you have to do it silently.</li>
+                        </ol>
+                        <p><em>At first when you do your mirror work, you may feel silly or stupid repeating the affirmations. You may even be angry or want to cry. That’s all right—in fact, it’s quite normal. And you’re not alone. Remember that I’m right here with you. I’ve been through this, too. And tomorrow is a new day.</em></p>
+
+                        <h3>The Power Is Within You: Your Day 1 Journaling Exercise</h3>
+                        <ol>
+                            <li>After you finish your morning mirror work, write down your feelings and observations. Did you feel angry or upset or silly?</li>
+                            <li>Six hours after finishing your morning mirror work, again write down your feelings and observations. As you continued to practice your mirror work formally and informally, did you start to believe what you were saying to yourself?</li>
+                            <li>Keep track of any changes in your behavior or your beliefs over the course of the day. Did the exercise get easier, or did you continue to find it difficult after doing it awhile?</li>
+                            <li>At the end of the day, before you go to bed, write down what you learned from doing your mirror work.</li>
+                        </ol>
+
+                        <h3>Your Heart Thought for Day 1: I Am Open and Receptive</h3>
+                        <p>If we do mirror work to create good in our lives but there’s a part of us that doesn’t believe we are worth it, we are not going to believe the words we are saying as we look in the mirror. We will reach a point at which we start thinking, <em>Mirror work doesn’t work.</em></p>
+                        <p>The truth is, the perception that mirror work doesn’t work has nothing to do with the mirror work itself or the affirmations we say. The problem is that we don’t believe we deserve all the good that life has to offer.</p>
+                        <p>If that’s your belief, then affirm: <em>I am open and receptive.</em></p>
+                    </div>
+                </div>
+
+                <!-- Day 2 -->
+                <div class="day">
+                    <button class="day-toggle">Day 2: Making Your Mirror Your Friend</button>
+                    <div class="day-content">
+                        <h3>Your Day 2 Mirror Work Exercise</h3>
+                        <ol>
+                            <li>Stand in front of your bathroom mirror.</li>
+                            <li>Look into your eyes.</li>
+                            <li>Using your name, say this affirmation: <em>[Name], I love you. I really, really love you.</em></li>
+                            <li>Take a few moments now to say it two or three more times: <em>I really, really love you, [Name].</em></li>
+                            <li>Keep repeating this affirmation over and over. I want you to be able to say it at least 100 times a day. Yes, that’s right: 100 times a day. I know that seems like a lot, but honestly, 100 times a day is easy once you get into the swing of it.</li>
+                            <li>So each time you pass a mirror or see your reflection just repeat this affirmation: <em>[Name], I love you. I really, really love you.</em></li>
+                        </ol>
+                         <p><em>When you find it difficult to tell yourself I love you, it is most likely because you are judging yourself, repeating those old, negative messages. Don’t add to your discomfort by judging yourself for making judgments. Just relax and commit to saying the affirmation. Remember: you are committing to an affirmation that’s true. The truth is, we do love ourselves, when we are not judging ourselves.</em></p>
+
+                        <h3>The Power Is Within You: Your Day 2 Journaling Exercise</h3>
+                        <p>Life is very simple. What we give out, we get back. In your journal, write down your responses to the following questions:</p>
+                        <ol>
+                             <li>What do you want that you are not getting?</li>
+                             <li>When you were growing up, what were the rules about deserving? Did you always have to earn in order to deserve? Were things taken away from you when you did something wrong?</li>
+                             <li>Do you feel that you deserve to live? To have joy? If not, why not?</li>
+                        </ol>
+                        <p><em>As you answer these questions, notice the emotions you are feeling. Write them down in your journal.</em></p>
+
+                        <h3>Your Heart Thought for Day 2: I Am Deserving</h3>
+                        <p>Sometimes we refuse to put any effort into creating a good life for ourselves because we believe that we don’t deserve it. The belief that we don’t deserve it may come from our early-childhood experiences. We might be buying into someone else’s concept or opinion that has nothing to do with our own reality.</p>
+                        <p>Deserving has nothing to do with being good. It is our unwillingness to receive the good in life that gets in the way. Allow yourself to accept the good, whether you think you deserve it or not.</p>
+                    </div>
+                </div>
+
+                <!-- Day 3 -->
+                 <div class="day">
+                    <button class="day-toggle">Day 3: Monitoring Your Self-Talk</button>
+                    <div class="day-content">
+                        <h3>Your Day 3 Mirror Work Exercise</h3>
+                        <ol>
+                            <li>Stand or sit in front of your bathroom mirror.</li>
+                            <li>Look into your eyes.</li>
+                            <li>Say this affirmation: <em>Whatever I say to myself, I will say it with love.</em></li>
+                            <li>Keep repeating it: <em>Whatever I say to myself in this mirror, I will say it with love.</em></li>
+                            <li>Is there a statement that you heard as a child that still sticks in your head? Maybe something like “You’re stupid” or “You’re not good enough,” or whatever else comes to mind. Take time to work with negative statements and turn them into positive affirmations: <em>I am smart. I am more intelligent than I realize. I am a genius with an abundance of creative ideas. I am a magnificent person. I am lovable. I am worth loving.</em></li>
+                            <li>Choose one or two of these new, positive affirmations and say them over and over again. Keep saying them until you feel comfortable with them.</li>
+                            <li>Each time you pass a mirror or see your reflection in a window throughout the day, stop and repeat these loving affirmations.</li>
+                        </ol>
+
+                        <h3>The Power Is Within You: Your Day 3 Journaling Exercise</h3>
+                        <ol>
+                            <li>Did you repeat a negative story today? Write down how many times you repeated it and how many people you told it to. Now write down something positive you can tell those people tomorrow that will help them feel better about themselves and everyone around them.</li>
+                            <li>Write down the word <em>should</em>. Next to it, make a list of words to use instead. You might start with the word <em>could</em>.</li>
+                            <li>Post several of the new, positive affirmations you learned today on your mirror so you can practice them whenever you see them.</li>
+                        </ol>
+
+                        <h3>Your Heart Thought for Day 3: I Always Have a Choice</h3>
+                        <p>Most of us have foolish ideas about who we are and many rigid rules about how life should be lived. Let’s remove the word <em>should</em> from our vocabulary forever. <em>Should</em> is a word that makes prisoners of us. Every time we use <em>should</em>, we are making ourselves wrong or someone else wrong. We are, in effect, saying: <em>not good enough</em>.</p>
+                        <p>What can be dropped now from your <em>should</em> list? Replace the word <em>should</em> with the word <em>could</em>. <em>Could</em> lets you know that you have a choice, and choice is freedom. We need to be aware that everything we do in life is done by choice. There is really nothing we <em>have</em> to do. We always have a choice.</p>
+                    </div>
+                </div>
+
+                 <!-- Day 4 -->
+                 <div class="day">
+                    <button class="day-toggle">Day 4: Letting Go of Your Past</button>
+                    <div class="day-content">
+                        <h3>Your Day 4 Mirror Work Exercise</h3>
+                        <ol>
+                            <li>Stand in front of your bathroom mirror.</li>
+                            <li>Take a deep breath and, as you exhale, allow all the tension to leave your body.</li>
+                            <li>Look at your forehead and imagine that you are pressing a button that ejects a disk of all the old beliefs and negative thoughts that have been playing in your head. Reach up and imagine that you are pulling this recording out of your head and throwing it away.</li>
+                            <li>Now look deeply into your eyes and tell yourself, <em>Let’s make a new recording of positive beliefs and affirmations.</em></li>
+                            <li>Say these affirmations aloud: <em>I am willing to let go. I release. I let go. I release all tension. I release all fear. I release all anger. I release all guilt. I release all sadness. I let go of old limitations and beliefs. I let go, and I am at peace. I am at peace with myself. I am at peace with the process of life. I am safe.</em></li>
+                            <li>Repeat these affirmations two or three times.</li>
+                            <li>Throughout the day, whenever any difficult thoughts arise, take out your pocket mirror and repeat these affirmations. Become familiar with them so that repeating them becomes a part of your daily routine.</li>
+                        </ol>
+
+                        <h3>The Power Is Within You: Your Day 4 Journaling Exercise</h3>
+                        <ol>
+                            <li>I find that most of the problems in our lives are caused by what I call the Big Four: Criticism, Fear, Guilt, and Resentment. In your journal, create four columns, heading each with one of the Big Four categories. Think about what role they play in your life. Write your thoughts and feelings about each category in the appropriate column.</li>
+                            <li>From Step 1, take the two categories you wrote the most about and write down ten positive affirmations in each category. For example, if one of the categories is Resentment, you might write affirmations like <em>I now choose to release all hurt and resentment. The more resentment I release, the more love I have to give.</em></li>
+                            <li>Everything in our lives is a mirror of who we are. Think of the people in your life who are the most challenging for you. What are the traits that bother you most about them? Write those down.</li>
+                            <li>Look at the traits that you listed in Step 3. Write down how each of these traits mirrors a belief that you have about yourself. You might also want to jot down what you have learned about yourself in doing today’s exercises.</li>
+                        </ol>
+
+                        <h3>Your Heart Thought for Day 4: I Can Let Go</h3>
+                         <p>We create habits and patterns because they serve us in some way. It is amazing how many illnesses we create because we want to punish a parent. We may not be doing this consciously—in fact, in most cases it is not conscious. But when we start looking within, we find the pattern. We often create negativity because we do not know how to handle some area of life. If that’s the case, ask yourself: <em>What am I feeling sorry about? Who am I angry at? What am I trying to avoid? How do I think this will this save me?</em></p>
+                         <p>If you are not ready to let something go—you really want to hold on to it because it serves you—it doesn’t matter what you do; you will not be able to let it go. However, when you are ready to let something go, it is amazing how easy it is to release it.</p>
+                    </div>
+                </div>
+
+                 <!-- Day 5 -->
+                 <div class="day">
+                    <button class="day-toggle">Day 5: Building Your Self-Esteem</button>
+                    <div class="day-content">
+                        <h3>Your Day 5 Mirror Work Exercise</h3>
+                        <ol>
+                            <li>Stand in front of your bathroom mirror.</li>
+                            <li>Look into your eyes.</li>
+                            <li>Say this affirmation: <em>I love and approve of myself.</em></li>
+                            <li>Keep saying it over and over again: <em>I love and approve of myself.</em></li>
+                            <li>Repeat this affirmation at least 100 times a day. Yes, that’s right: 100 times. Let <em>I love and approve of myself</em> become your mantra.</li>
+                            <li>Each time you pass a mirror or see your reflection, repeat this affirmation.</li>
+                        </ol>
+                         <p><em>This is an exercise I have given to hundreds and hundreds of people over the years. The results are absolutely phenomenal when people stick with it. Remember: mirror work doesn’t work in theory; it only works in practice. If you do it, it really will make a difference.</em></p>
+                         <p><em>If any negative thoughts come up—such as How can I approve of myself when I am fat?, or It’s silly to think that I can think this way, or I am no good—don’t resist them, don’t fight them, don’t judge them. Let them just be there. Stay focused on what you really want to experience, which is to love and approve of yourself. You can gently let go of other thoughts that intrude and stay focused on I love myself and approve of myself.</em></p>
+                         <p><em>What we are doing in mirror work is trying to get back to the heart of who we really are. We want to experience who we are when we are not judging ourselves.</em></p>
+
+                        <h3>The Power Is Within You: Your Day 5 Journaling Exercise</h3>
+                        <ol>
+                            <li>Write down some of the ways you don’t love yourself or ways you express your lack of self-worth. Do you criticize your body? Do you talk down to yourself?</li>
+                            <li>Write down some of the negative opinions you think others have of you. For each of these negative opinions, write down an affirmation to turn it into a positive statement. For example, you could change <em>My mother thinks I’m fat</em> to <em>I am beautiful exactly as I am.</em></li>
+                            <li>Make a list of all the reasons why you love yourself. Make another list of why people love to spend time with you.</li>
+                            <li>Post these loving lists where you can see them every day.</li>
+                        </ol>
+
+                        <h3>Your Heart Thought for Day 5: I Love Being Me</h3>
+                        <p>Can you imagine how wonderful it would be if you could live your life without ever being criticized by anyone? Wouldn’t it be wonderful to feel totally at ease, totally comfortable? You would get up in the morning and know you were going to have a wonderful day, because everybody would love you and nobody would put you down. You would feel just great.</p>
+                        <p>You know what? You can give this to yourself. You can make the experience of living with yourself the most wonderful experience imaginable. You can wake up in the morning and feel the joy of spending another day with you.</p>
+                    </div>
+                </div>
+
+                 <!-- Day 6 -->
+                 <div class="day">
+                    <button class="day-toggle">Day 6: Releasing Your Inner Critic</button>
+                    <div class="day-content">
+                         <h3>Your Day 6 Mirror Work Exercise</h3>
+                         <ol>
+                            <li>Find a quiet place with a mirror where you will feel safe and where you won’t be disturbed.</li>
+                            <li>Look into the mirror. Look straight into your eyes. If you are still uncomfortable doing this, then concentrate on your mouth or your nose. Talk to your inner child. Your inner child wants to grow and blossom, and needs love, acceptance, and praise.</li>
+                            <li>Now say these affirmations: <em>I love you. I love you, and I know you are doing the best you can. You are perfect just as you are. I approve of you.</em></li>
+                            <li>You may want to do this exercise several times before you truly feel that your inner voice is less critical. Do what feels right for you.</li>
+                        </ol>
+
+                        <h3>The Power Is Within You: Your Day 6 Journaling Exercise</h3>
+                         <ol>
+                            <li>Make a list of five things you criticize yourself for.</li>
+                            <li>Go down the list, and beside each item write the date on which you began to criticize yourself for this particular thing. If you can’t remember the exact date, approximate.</li>
+                            <li>Are you amazed at how long you’ve been picking on yourself? This habit of self-criticism has not produced any positive changes, has it? Criticism doesn’t work! It only makes you feel bad. So be willing to stop it.</li>
+                            <li>Change each of the five criticisms on your list to a positive affirmation.</li>
+                            <li>Carry this list with you. When you notice yourself being judgmental, take out the list of affirmations and read it a few times. Better yet, read it aloud in front of your mirror.</li>
+                        </ol>
+
+                        <h3>Your Heart Thought for Day 6: I Love and Accept Myself Exactly as I Am</h3>
+                         <p>We all have areas of our lives that we think are unacceptable and unlovable. If we are really angry with parts of ourselves, we often engage in self-abuse. We abuse alcohol, drugs, or cigarettes. We overeat. We beat ourselves up emotionally. One of the worst things we do, which causes more damage than anything else, is criticize ourselves. We need to stop all criticism. Once we get into the habit of not criticizing ourselves, it is amazing how we stop criticizing other people. We realize that everyone is a reflection of us, and what we see in another person we can see in ourselves.</p>
+                         <p>When we complain about someone, we are really complaining about ourselves. When we can truly love and accept who we are, there is nothing to complain about. We cannot hurt ourselves, and we cannot hurt another person. Let’s make a vow that we will no longer criticize ourselves for anything.</p>
+                    </div>
+                </div>
+
+                 <!-- Day 7 -->
+                 <div class="day">
+                    <button class="day-toggle">Day 7: Loving Yourself: A Review of Your First Week</button>
+                    <div class="day-content">
+                         <h3>Your Day 7 Mirror Work Exercise</h3>
+                         <ol>
+                            <li>Stand in front of your bathroom mirror.</li>
+                            <li>Look into your eyes.</li>
+                            <li>Say these affirmations: <em>I love you. I really love you. And I’m so proud of you for doing your mirror work.</em></li>
+                            <li>Repeat these affirmations ten times, adding your name: <em>I love you, [Name]. I really love you. I love you, [Name]. I really love you. And I’m so proud of you for doing your mirror work.</em></li>
+                            <li>Look at your forehead and imagine that you are pressing a button there and ejecting a disk of your old beliefs and negative thoughts that has been playing in your head. Take your hand and imagine that you are pulling that disk out of your head and throwing it away.</li>
+                            <li>Now look deeply in your eyes and imagine that you are making a new CD of positive affirmations: <em>I am willing to let go. I am worth loving. I am perfect just the way I am.</em></li>
+                        </ol>
+
+                        <h3>The Power Is Within You: Your Day 7 Journaling Exercise</h3>
+                         <ol>
+                            <li>Take out your journal and open it to the first exercise you did, on Day 1.</li>
+                            <li>Read the feelings and observations you wrote down after your mirror work on Day 1.</li>
+                            <li>On a new page, write down your feelings and observations after the first week of doing your mirror work. Are the exercises getting easier? Are you feeling more comfortable looking in the mirror?</li>
+                            <li>Write down where you are having the most success with your mirror work. Write down where you are having the most difficulty.</li>
+                            <li>Create new affirmations to help you in those areas where you are having blocks.</li>
+                        </ol>
+
+                        <h3>Your Heart Thought for Day 7: All My Experiences Are Right for Me</h3>
+                         <p>We have been going through doors since the moment we were born. That was a big door and a big change, and we have been through many doors since then.</p>
+                         <p>We came to this lifetime equipped with everything we need in order to live fully and richly. We have all the wisdom and knowledge we need. We have all the abilities and talents we need. We have all the love we need. Life is here to support us and take care of us. We need to know and trust that this is so.</p>
+                         <p>Doors are constantly closing and opening, and if we stay centered in ourselves, then we will always be safe, no matter which doorway we pass through. Even when we pass through the last doorway on this planet, it is not the end. It is simply the beginning of another new adventure. Trust that it is all right to experience change.</p>
+                         <p>Today is a new day. We will have many wonderful new experiences. We are loved. We are safe.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 2 -->
+         <div class="week">
+            <button class="week-toggle">Week 2</button>
+            <div class="week-content">
+                <!-- Day 8 -->
+                <div class="day">
+                    <button class="day-toggle">Day 8: Loving Your Inner Child—Part One</button>
+                    <div class="day-content">
+                         <h3>Your Day 8 Mirror Work Exercise</h3>
+                         <ol>
+                            <li>Find a photo of yourself when you were about five years old. Tape the photo to your bathroom mirror.</li>
+                            <li>Look at the photo for a few minutes. What do you see? Do you see a happy child? A miserable child?</li>
+                            <li>Talk to your inner child in the mirror. You can look at the photo or even look into your own eyes—whichever feels more comfortable for you. If you had a nickname as a child, use this name as you speak to your inner child. What works really well is to sit in front of the mirror, because if you are standing, as soon as difficult feelings start to come up, you might be tempted to run out the door. So sit down, grab a box of tissues, and start talking.</li>
+                            <li>Open your heart and share your innermost thoughts.</li>
+                            <li>When you are finished, say these affirmations: <em>I love you, dear one. I am here for you. You are safe.</em></li>
+                        </ol>
+
+                        <h3>The Power Is Within You: Your Day 8 Journaling Exercise</h3>
+                         <ol>
+                            <li>For this exercise, you will need crayons, colored pencils, or colored felt-tip pens.</li>
+                            <li>Using your nondominant hand—the one you don’t write with— draw a picture of yourself as a child. Be creative!</li>
+                            <li>Tape the drawing to your bathroom mirror.</li>
+                            <li>Look at the picture and begin talking to your inner child.</li>
+                            <li>Ask your child the following questions and write down the answers in your journal: <em>What do you like? What do you dislike? What frightens you? What do you need? What can I do to make you happy?</em></li>
+                            <li>Close your eyes and take a few minutes to reflect on what you’ve learned about your inner child.</li>
+                        </ol>
+
+                        <h3>Your Heart Thought for Day 8: I Embrace My Inner Child with Love</h3>
+                         <p>Take care of your inner child. It is the child who is frightened. It is the child who is hurting. It is the child who does not know what to do.</p>
+                         <p>Be there for your child. Embrace it and love it and do whatever you can to take care of its needs. Be sure to let your child know that no matter what happens, you will always be there for it. You will never turn away or desert it. You will always love this child.</p>
+                    </div>
+                </div>
+
+                 <!-- Day 9 -->
+                 <div class="day">
+                    <button class="day-toggle">Day 9: Loving Your Inner Child—Part Two</button>
+                    <div class="day-content">
+                         <h3>Your Day 9 Mirror Work Exercise</h3>
+                         <ol>
+                            <li>Go to your bathroom mirror and look at the picture of yourself as a child that you taped to it yesterday.</li>
+                            <li>Take a moment right now and tell your inner child that you care. Say these affirmations: <em>I care about you. I love you. I really love you.</em></li>
+                            <li>Sit in front of your mirror, if you can, or sit and look into a handheld mirror. Continue the conversation with your inner child that you began yesterday. You could open with an apology, saying something like <em>I’m sorry I haven’t talked to you over the years. I’m sorry I scolded you for so long. I want to make up for all the time we spent apart from each other.</em></li>
+                            <li>If you haven’t talked to your inner child in 50 or 60 years, it may take some time before you feel like you’re reconnecting. But be persistent. Eventually you will make a connection. You may feel the child inside you. You may hear the child inside you. You may even see the child inside you.</li>
+                            <li>Keep your tissue box nearby. It’s okay to cry while you are talking to your inner child. Tears will help you to break through and connect with the child inside you.</li>
+                        </ol>
+
+                        <h3>The Power Is Within You: Your Day 9 Journaling Exercise</h3>
+                         <ol>
+                            <li>When you were little, what did you really like to do? Write down everything that comes to mind. When was the last time you did any of these things? Too often, the parent inside us will stop us from having fun because it’s not the adult thing to do.</li>
+                            <li>Now put down your journal and go outside and play with your little child. Have fun! Do the silly things you loved to do when you were young, like jumping in a pile of leaves or running under the garden sprinkler. Watch other children at play. It will bring back memories of the games you enjoyed. If you want more fun in your life, make the connection with your inner child and come from that space of spontaneity. I promise that you will start having more fun.</li>
+                        </ol>
+
+                        <h3>Your Heart Thought for Day 9: I Am Willing to Change and Grow</h3>
+                         <p>You are willing to learn new things because you do not know it all. You are willing to drop old concepts when they no longer work for you. You are willing to see your behavior and say, “I don’t want to do that anymore.” You know you can become more of who you are. Not become a better person— that would imply that you are not good enough, which isn’t true—but more of who you <em>really</em> are.</p>
+                         <p>Growing and changing is exciting, even if you have to look at some painful things within yourself in order to do so.</p>
+                    </div>
+                 </div>
+
+                 <!-- Day 10 -->
+                 <div class="day">
+                    <button class="day-toggle">Day 10: Loving Your Body, Healing Your Pain</button>
+                    <div class="day-content">
+                        <h3>Your Day 10 Mirror Work Exercise</h3>
+                         <ol>
+                            <li>Choose the pain or illness you would like to work on today. Let’s say it’s heartburn.</li>
+                            <li>Stand or sit in front of your mirror.</li>
+                            <li>Look deeply into your eyes, and ask yourself these questions: <em>Where did this heartburn come from? What is it trying to tell me? Have I been eating unhealthy foods? Is there something that I am fearful about? Did I hear some news that I’m not able to digest? Is there a heated situation that I’m not dealing with? What or who can’t I stomach?</em></li>
+                            <li>Regardless of what pain or dis-ease you are experiencing, you can say these affirmations: <em>I breathe freely and fully. I listen to the messages of my body. I feed my body healthy and nourishing food. I allow my body to rest when needed. I love my amazing body. I am safe. I trust the process of life. I am fearless.</em> Keep repeating the affirmations.</li>
+                            <li>Now do some affirmations specifically for the area causing you pain. (You can look up mental patterns for pain and particular illnesses, along with corresponding affirmations, in my book <em>Heal Your Body</em>.) If you’re having stomach problems, for example, you can say: <em>I love my stomach. I really love you, my healthy stomach. I feed you healthy foods, and you digest them with joy. I give you permission to be well.</em></li>
+                            <li>Repeat these affirmations two or three more times.</li>
+                        </ol>
+
+                        <h3>The Power Is Within You: Your Day 10 Journaling Exercise</h3>
+                         <ol>
+                            <li>When you feel pain or discomfort, take time to quiet yourself. Trust that your Higher Power will let you know what needs to be changed in your life so you can be free of this pain.</li>
+                            <li>Visualize a perfect natural setting with your favorite flowers growing in abundance all around you. Feel and smell the sweet, warm air as it blows gently across your face. Concentrate on relaxing every muscle in your body.</li>
+                            <li>Ask yourself these questions: <em>How am I contributing to this problem? What is it that I need to know? What areas of my life are in need of change?</em> Meditate on these questions and let the answers arise. Write down the answers in your journal.</li>
+                            <li>Choose one of the answers you received in Step 3 and write an action plan that you can work on today.</li>
+                        </ol>
+                         <p><em>Make changes one step at a time. As the Chinese philosopher Lao-tzu said, “The journey of a thousand miles begins with a single step.” One small step added to another can create significant change in your life. Pain does not necessarily disappear overnight, though it may. It has taken time for pain to surface; therefore it may take some time to recognize that it is no longer needed. Be gentle with yourself.</em></p>
+
+                        <h3>Your Heart Thought for Day 10: I Listen Carefully to My Body’s Messages</h3>
+                         <p>The body, like everything else in life, is a mirror of your inner thoughts and beliefs. Every cell responds to every single thought you think and every word you speak.</p>
+                         <p>In this world of change, you choose to be flexible in all areas. You are willing to change yourself and your beliefs to improve the quality of your life and your world. Your body loves you in spite of how you may treat it. Your body communicates with you, and you now listen to its messages. You are willing to get the message.</p>
+                         <p>You pay attention and make the necessary corrections. You love your body and give it what it needs on every level to bring it back to optimal health. You call upon an inner strength that is yours whenever you need it.</p>
+                    </div>
+                 </div>
+
+                 <!-- Day 11 -->
+                 <div class="day">
+                    <button class="day-toggle">Day 11: Feeling Good, Releasing Your Anger</button>
+                    <div class="day-content">
+                         <h3>Your Day 11 Mirror Work Exercise</h3>
+                         <ol>
+                            <li>Find a place with a mirror where you will feel safe and will not be disturbed.</li>
+                            <li>Look into your eyes in the mirror. If you are still uncomfortable doing this, then concentrate on your mouth or nose.</li>
+                            <li>See yourself and/or the person you believe has wronged you. Remember the moment when you became angry and let yourself feel the anger come through you. Begin to tell this person exactly what you are so angry about. Express all the anger you feel. Be specific. You could say something like: <em>I am angry at you because [fill in the reason]. I am hurt because you [fill in the reason]. I am so afraid because you [fill in the reason].</em></li>
+                            <li>You may need to do this exercise several times before you truly feel that you have gotten rid of all your anger. You may want to work on one anger issue or several. Do what feels right for you.</li>
+                        </ol>
+
+                        <h3>The Power Is Within You: Your Day 11 Journaling Exercise</h3>
+                         <ol>
+                            <li>Have you been angry for much of your life? Here are some questions you can journal about to help release these habitual angry feelings: <em>Why am I choosing to be angry all the time? What am I doing to create situation after situation that angers me? Who am I still punishing? What am I giving out that attracts in others the need to irritate me?</em></li>
+                            <li>Now ask yourself these questions and write down your answers: <em>What do I want? What makes me happy? What can I do to make myself happy?</em></li>
+                            <li>Think about ways you can create a new space inside you to feel good about yourself. Think about ways you can create optimistic and cheerful patterns and beliefs.</li>
+                        </ol>
+
+                        <h3>Your Heart Thought for Day 11: I Deserve to Feel Good</h3>
+                         <p>Life is very simple. We create our experiences by our patterns of thought and feeling. What we believe about ourselves and about life becomes true for us. Thoughts are only words strung together. They have no meaning whatsoever. It is we who give meaning to them. We give meaning to them by focusing on the negative messages over and over in our minds.</p>
+                         <p>What we do with our feelings is very important. Are we going to act them out? Will we punish others? Sadness, loneliness, guilt, anger, and fear are all normal emotions. But when these feelings take over and become predominant, life can be an emotional battlefield.</p>
+                         <p>Through mirror work, self-love, and positive affirmations, you can nourish yourself and relieve any of the anxiety you may be feeling at the moment. Do you believe you deserve peace and serenity in your emotional life?</p>
+                         <p>Let’s affirm: <em>I release the pattern in my consciousness that is creating resistance to my good. I deserve to feel good.</em></p>
+                    </div>
+                 </div>
+
+                 <!-- Day 12 -->
+                 <div class="day">
+                    <button class="day-toggle">Day 12: Overcoming Your Fear</button>
+                    <div class="day-content">
+                         <h3>Your Day 12 Mirror Work Exercise</h3>
+                         <ol>
+                            <li>What is the greatest fear you are experiencing now? Write it on a Post-it® note and stick the note on the left side of your mirror. Acknowledge this fear. Tell it: <em>I know you want to protect me. I appreciate that you want to help me. I thank you. Now I let you go. I release you and I am safe.</em> Then take the sticky note, rip it up, and toss it in the trash or flush it down the toilet. However you get rid of the fear, the point is to release it.</li>
+                            <li>Look in the mirror again and repeat these affirmations: <em>I love and trust. Love and life take care of me. I am one with the Power that created me. I am safe. All is well in my world.</em></li>
+                            <li>Now look in the mirror and observe your breathing. We often hold our breath when we’re frightened. If you are feeling threatened or fearful, consciously breathe. Take a few deep breaths. Breathing opens the space inside you that is your power. It straightens your spine, opens your chest, and gives your tender heart room to expand.</li>
+                            <li>Continue breathing naturally and observing your breath. As you do this, repeat these affirmations: <em>I love you, [Name]. I love you. I really love you. I trust life. Life gives me everything I need. There is nothing to fear. I am safe. All is well.</em></li>
+                        </ol>
+
+                        <h3>The Power Is Within You: Your Journaling Exercise for Day 12</h3>
+                         <ol>
+                            <li>Write down your greatest fears under the following headings: Family, Health, Career, Relationships, and Finances.</li>
+                            <li>Then write one or more positive affirmations for each fear you listed. For example, if you wrote <em>I’m afraid I’ll get sick and won’t be able to take care of myself</em>, then an affirmation might be <em>I will always attract all the help I need.</em></li>
+                        </ol>
+
+                        <h3>Your Heart Thought for Day 12: I Am Always Perfectly Protected</h3>
+                         <p>Remember: when a fearful thought comes up, it is just trying to protect you. Tell the fear, “I appreciate that you want to help me.” Follow that with an affirmation to address that particular fear. Acknowledge and thank the fear, but don’t give it power or importance.</p>
+                    </div>
+                 </div>
+
+                 <!-- Day 13 -->
+                 <div class="day">
+                    <button class="day-toggle">Day 13: Starting Your Day with Love</button>
+                    <div class="day-content">
+                        <h3>Your Day 13 Mirror Work Exercise</h3>
+                         <ol>
+                            <li>When you first wake up in the morning and open your eyes, say these affirmations to yourself: <em>Good morning, bed. Thank you for being so comfortable. I love you. This is a blessed day. All is well. I have time for everything I need to do today.</em></li>
+                            <li>Now take a few more minutes to relax and let these affirmations flow through your mind, then feel them in your heart and throughout the rest of your body.</li>
+                            <li>When you’re ready to get up, go to your bathroom mirror. Look deeply into your eyes. Smile at that beautiful, happy, relaxed person looking back at you!</li>
+                            <li>As you’re looking in the mirror, say these affirmations: <em>Good morning, [Name]. I love you. I really, really love you. There are great experiences coming our way today.</em> And then say something nice to yourself like: <em>Oh, you look wonderful today. You have the best smile. I wish you a terrific day today.</em></li>
+                        </ol>
+
+                        <h3>The Power Is Within You: Your Day 13 Journaling Exercise</h3>
+                         <ol>
+                            <li>Create a morning ritual for yourself. Write down all the steps you can take to start your morning in a positive, happy, and supportive way.</li>
+                            <li>Write down two or three affirmations you can say for each of the steps in your morning ritual. Write affirmations for when you get dressed, when you make your breakfast, and when you get in your car and drive to work.</li>
+                            <li>If you would like more examples of affirmations for your daily ritual, see the affirmations in the back of <em>You Can Create an Exceptional Life</em>, the book I wrote with Cheryl Richardson.</li>
+                        </ol>
+
+                        <h3>Your Heart Thought for Day 13: I Open New Doors to Life</h3>
+                         <p>You are standing in the corridor of life, and behind you many doors have closed. The doors represent things you no longer do or say or think, experiences you no longer have. Ahead of you is an unending corridor of doors, each one opening to a new experience.</p>
+                         <p>As you move forward, see yourself opening doors on wonderful experiences you would like to have. See yourself opening doors to joy, peace, healing, prosperity, and love. Doors to understanding, compassion, and forgiveness. Doors to freedom. Doors to self-worth and self-esteem. Doors to self-love. It is all here before you. Which door will you open first?</p>
+                         <p>Trust that your inner guide is leading you in the ways that are best for you and that your spiritual growth is continuously expanding. No matter which door opens or which door closes, you are always safe.</p>
+                    </div>
+                 </div>
+
+                 <!-- Day 14 -->
+                 <div class="day">
+                    <button class="day-toggle">Day 14: Loving Yourself: A Review of Your Second Week</button>
+                    <div class="day-content">
+                        <h3>Your Day 14 Mirror Work Exercise</h3>
+                         <ol>
+                            <li>Find a photo of yourself as a child at a time when you were truly happy. Perhaps you have a snapshot taken at your birthday party, or while you were doing something with friends or visiting one of your favorite places.</li>
+                            <li>Tape this photo to your bathroom mirror.</li>
+                            <li>Talk to that vibrant and happy child in the photo. Tell this child how much you want to feel that way again. Discuss with your inner child your true feelings and what’s holding you back.</li>
+                            <li>Say these affirmations to yourself: <em>I am willing to let go of all my fears. I am safe. I love my inner child. I love you. I am happy. I am content. And I am loved.</em></li>
+                            <li>Repeat these affirmations ten times.</li>
+                        </ol>
+
+                        <h3>The Power Is Within You: Your Day 14 Journaling Exercise</h3>
+                         <ol>
+                            <li>Take out your journal and open it to the first exercise you did on Day 7.</li>
+                            <li>Read the feelings and observations you wrote down when you did your mirror work that day.</li>
+                            <li>On a new page, write down your feelings and observations today, after the second week of mirror work. Are the exercises getting easier for you? Are you feeling more comfortable looking in the mirror?</li>
+                            <li>Write down where you are having the most success. Write down where you are having the most trouble.</li>
+                            <li>Create a new mirror work exercise and affirmations to help you in those areas where you are experiencing blocks.</li>
+                        </ol>
+
+                        <h3>Your Heart Thought for Day 14: I Am Willing to See Only My Magnificence</h3>
+                         <p>Choose to eliminate from your mind and your life every negative, destructive, fearful idea and thought. No longer listen to or become part of detrimental thoughts or conversations. Today no one can harm you because you refuse to believe in being hurt. You refuse to indulge in damaging emotions, no matter how justified they may seem to be. You rise above anything that attempts to make you angry or afraid. Destructive thoughts have no power over you.</p>
+                         <p>You think and say only what you want to create in your life. You are more than adequate for all you need to do. You are one with the Power that created you. You are safe. All is well in your world.</p>
+                    </div>
+                </div>
+
+            </div> <!-- End Week 2 Content -->
+        </div> <!-- End Week 2 -->
+
+         <!-- WEEK 3 -->
+         <div class="week">
+            <button class="week-toggle">Week 3</button>
+            <div class="week-content">
+
+                 <!-- Day 15 -->
+                 <div class="day">
+                     <button class="day-toggle">Day 15: Forgiving Yourself and Those Who Have Hurt You</button>
+                     <div class="day-content">
+                        <h3>Your Day 15 Mirror Work Exercise</h3>
+                         <p>I believe you receive the most benefit from forgiveness work when you do it in front of a mirror. I suggest finding a mirror you can sit in front of comfortably. I like to use the long mirror on the back of my bedroom door. Give yourself time to do this exercise. And you will probably want to repeat it often. Most of us have a lot of people to forgive.</p>
+                         <ol>
+                            <li>Sit in front of your mirror and close your eyes. Breathe deeply several times. Feel yourself grounded on your chair.</li>
+                            <li>Think of the many people who have hurt you in your life. Let them pass through your mind. Now open your eyes and begin to talk to one of them—aloud. Say something like “You hurt me deeply. I thought I would never get past this. However, I will not stay stuck in the past any longer. I am willing to forgive you.” If you can’t do that yet, just affirm, <em>I am willing</em>. Your willingness is all it takes to move toward forgiveness.</li>
+                            <li>Take a breath and then say to the person, “I forgive you. I set you free.” Breathe again and say, “You are free. I am free.”</li>
+                            <li>Notice how you feel. You may feel resistance or you may feel relief. If you feel resistance, just breathe and affirm: <em>I am willing to release all resistance.</em></li>
+                            <li>As you continue to do this exercise, today or another day, expand your list of people to forgive. Remember: forgiveness is not an event; it’s a process. You may need to keep working on one person a little longer, each time going a little deeper into forgiveness.</li>
+                        </ol>
+                         <p><em>This may be a day when you can forgive several people. It may be a day when you can forgive only one. It doesn’t matter. However you do this exercise is the right way for you. The universe and forgiveness see your showing up. At times forgiveness is like peeling away the layers of an onion. If there are too many layers, put the onion away for a day or so. You can always come back and peel another layer. Acknowledge yourself for even being willing to do this exercise. You are healing.</em></p>
+
+                        <h3>The Power Is Within You: Your Day 15 Journaling Exercise</h3>
+                         <ol>
+                            <li>Put on some soft music—something that will make you feel relaxed and peaceful. Now take your journal and a pen, and let your mind drift.</li>
+                            <li>Go back into the past and think of all the things that you’re angry with yourself about. Write them down. Write them all down. You may discover that you have never forgiven yourself for the humiliation of wetting your pants in the first grade. What a long time to carry that burden!</li>
+                            <li>Now take this list and write a positive affirmation for each item. If you wrote <em>I’ll never forgive myself for [incident]</em>, then your affirmation could be: <em>This is a new moment. I am free to let go.</em> Remember that sometimes it’s easier to forgive others than to forgive yourself. Often we demand perfection of ourselves and are harder on ourselves than on others. However, it’s time to go beyond this old attitude. Forgive yourself. Let it go. Give yourself the space to be spontaneous and free.</li>
+                            <li>And now put down your journal and go outside—to a beach, a park, even an empty lot—and let yourself run. Don’t jog; run— wild and free. Do somersaults. Skip along the street and laugh while you’re doing it! Take your inner child outdoors with you and have some fun. So what if someone sees you? This is for your freedom!</li>
+                        </ol>
+
+                        <h3>Your Heart Thought for Day 15: I Can Forgive</h3>
+                         <p>I am one with life, and life loves me and supports me. Therefore, I claim for myself an open heart filled with love. We are all doing the best we can at any given moment, and this is also true for me. The past is over and done. I am not my parents or their patterns of resentment. I am my own unique self, and I choose to open my heart and allow love, compassion, and understanding to flush out all memories of past pain. I am free to be all that I can be. This is the truth of my being, and I accept it as so. All is well in my life.</p>
+                    </div>
+                 </div>
+
+                 <!-- Day 16 -->
+                 <div class="day">
+                     <button class="day-toggle">Day 16: Healing Your Relationships</button>
+                     <div class="day-content">
+                         <h3>Your Day 16 Mirror Work Exercise</h3>
+                         <ol>
+                            <li>Go back to your lesson on mirror work from Day 2.</li>
+                            <li>Stand in front of your mirror.</li>
+                            <li>Look deeply into your eyes and say these affirmations: <em>I love you. I really love you.</em></li>
+                            <li>Using your name this time, look deeply into your eyes and say, <em>I love you, [Name]. I really love you.</em> These affirmations are worth repeating over and over again.</li>
+                            <li>If you are having trouble in your relationships, look into your eyes, breathe deeply, and say, <em>I am willing to release the need for relationships that don’t nourish and support me.</em> Repeat this five times in the mirror, and each time you say it, give it more meaning. Think of specific relationships as you say it.</li>
+                        </ol>
+
+                        <h3>The Power Is Within You: Your Day 16 Journaling Exercise</h3>
+                         <ol>
+                            <li>In your journal, write about how you experienced love as a child. Did you observe your parents expressing love and affection? Were you raised with lots of hugs? In your family was love hidden behind fighting, crying, or silence?</li>
+                            <li>Write ten affirmations of love and practice them in front of your mirror. Here are some examples: <em>I am worthy of love. The more I open to love, the safer I am. Today I remember that life loves me. I let love find me at the perfect time.</em></li>
+                            <li>Write down ten things that you love to do. Pick five and do them today.</li>
+                            <li>Take several hours and pamper yourself: buy yourself flowers, treat yourself to a healthy meal, show yourself how special you are.</li>
+                            <li>Repeat Step 3 every day this week!</li>
+                        </ol>
+
+                        <h3>Your Heart Thought for Day 16: I Live in a Circle of Love</h3>
+                         <p>Envelop your family in a circle of love, whether family members are living or not. Broaden the circle to include your friends, your loved ones, your co-workers, everyone from your past, and all the people you would like to forgive but don’t know how. Affirm that you have wonderful, harmonious relationships with them all, with respect and caring on both sides.</p>
+                         <p>Know that you can live with dignity and peace and joy. Let this circle of love envelop the entire planet, and let your heart open so that you have space within you for unconditional love.</p>
+                    </div>
+                 </div>
+
+                 <!-- Day 17 -->
+                 <div class="day">
+                     <button class="day-toggle">Day 17: Living Stress Free</button>
+                     <div class="day-content">
+                         <h3>Your Day 17 Mirror Work Exercise</h3>
+                         <ol>
+                            <li>For this exercise, I’d like you to start by sitting in a comfortable chair with your hands in your lap and both feet flat on the floor. Now close your eyes and take three long, deep breaths. Breathe in slowly and breathe out. Breathe in and breathe out. Imagine that you are wearing your tension and fear as an overcoat. Imagine undoing the buttons and pulling the coat off your shoulders, sliding it over your arms, and dropping it on the floor. Feel any fear and tension flowing out of your body. Feel your muscles relax. Allow your entire body to relax.</li>
+                            <li>Now pick up your pocket mirror and look deeply into your eyes. Say: <em>I release all fear. I let go of all tension. I am at peace. Freedom from stress is my divine right.</em> Keep repeating these affirmations over and over again.</li>
+                            <li>Close your eyes and take a few more minutes to breathe deeply. Repeat these affirmations: <em>I believe in ME. I am a capable person. I can do it. I can handle anything that comes my way. I believe in possibilities.</em></li>
+                            <li>Anytime you see your reflection today, repeat these affirmations: <em>I am at peace. I have all the time I need. I flow with life easily and ef ortlessly.</em></li>
+                        </ol>
+
+                        <h3>The Power Is Within You: Your Day 17 Journaling Exercise</h3>
+                         <ol>
+                            <li>Close your eyes and drift back to your past. See yourself when you were five years old. Where are you? At school? At home? What do you like to do? How do you view the world? Open your eyes and write down whatever comes to mind.</li>
+                            <li>Do you remember any of the worries or negative beliefs that you had when you were five years old? Do you remember any hurt feelings? Write them all down.</li>
+                            <li>Next to all the beliefs you wrote down in Step 2, write down the real reasons for these beliefs. Perhaps your parents were having a bad day at work and told you something that wasn’t true. Perhaps a childhood friend who was unloved decided to take it out on you. Write all your thoughts in your journal.</li>
+                            <li>Make a list of some of the things that are causing you stress this week. Do any of them have to do with the limited thinking of your five-year-old consciousness? Take time to write down your innermost thoughts and reflections.</li>
+                        </ol>
+
+                        <h3>Your Heart Thought for Day 17: I Experience the Totality of Possibilities Within Me</h3>
+                         <p>What does the <em>totality of possibilities</em> mean to you? Think of it as going beyond all limitations. Let your mind go beyond thoughts like <em>It can’t be done. It won’t work. There’s not enough time. There are too many obstacles.</em></p>
+                         <p>Think of how often you have expressed these limitations: <em>Because I’m a woman, I can’t do this. Because I’m a man, I can’t do that. I don’t have what it takes.</em> You hold on to limitations because they are important to you. But limitations stop you from expressing and experiencing the totality of possibilities. Every time you think <em>I can’t</em>, you are limiting yourself. Are you willing to go beyond what you believe today?</p>
+                    </div>
+                 </div>
+
+                <!-- Day 18 -->
+                <div class="day">
+                    <button class="day-toggle">Day 18: Receiving Your Prosperity</button>
+                    <div class="day-content">
+                        <h3>Your Day 18 Mirror Work Exercise</h3>
+                        <ol>
+                           <li>Today your mirror work is going to focus on receiving your prosperity. Stand up with your arms outstretched and say: <em>I am open and receptive to all good.</em></li>
+                           <li>Now look into the mirror and say it again: <em>I am open and receptive to all good.</em> Let the words flow from your heart: <em>I am open and receptive to all good.</em></li>
+                           <li>Repeat this affirmation ten more times.</li>
+                           <li>Notice how you feel. Do you feel liberated? Do this exercise every morning until the end of your mirror work course. It’s a wonderful way to increase your prosperity consciousness.</li>
+                       </ol>
+
+                       <h3>The Power Is Within You: Your Day 18 Journaling Exercise</h3>
+                        <ol>
+                           <li>What are your beliefs about money? Go back to the mirror. Look into your eyes and say: <em>My biggest fear about money is [fill in your fear].</em> Write down your answer and why you feel this way.</li>
+                           <li>What did you learn about money as a child? How were finances handled in your family? How do you handle money now? Write your thoughts down. Do you see any patterns?</li>
+                           <li>Now do some journaling to shift yourself into prosperity thinking. Write down what it would be like to have all the things you have always wanted. What would they be? What would your life look like then? Where would you travel? What would you do? Feel it. Enjoy it. Be creative and have fun.</li>
+                       </ol>
+
+                       <h3>Your Heart Thought for Day 18: I Am a Yes Person</h3>
+                        <p>I know that I am one with all life. I am surrounded by and permeated with Infinite Wisdom. Therefore, I rely totally on the Universe to support me in every positive way. Everything I could possibly need is already here waiting for me. This planet has more food on it than I could possibly eat. There is more money than I could ever spend. There are more people than I could ever meet. There is more love than I could possibly experience. There is more joy than I can even imagine. This world has everything I need and desire. It is all mine to use and to have.</p>
+                        <p>The One Infinite Mind, the One Infinite Intelligence, always says yes to me. No matter what I choose to believe or think or say, the Universe always says yes. I do not waste my time on negative thinking or negative subjects. I choose to see myself and life in the most positive ways.</p>
+                        <p>I say Yes! to opportunity and prosperity. I say Yes! to all good. I am a Yes! person living in a Yes! world, being responded to by a Yes! Universe, and I rejoice that this is so.</p>
+                        <p>I am grateful to be one with Universal Wisdom and backed by Universal Power.</p>
+                   </div>
+                </div>
+
+                <!-- Day 19 -->
+                <div class="day">
+                   <button class="day-toggle">Day 19: Living Your Attitude of Gratitude</button>
+                   <div class="day-content">
+                        <h3>Your Day 19 Mirror Work Exercise</h3>
+                        <ol>
+                           <li>When you first wake up in the morning and open your eyes, say these affirmations to yourself: <em>Good morning, bed. I am so grateful for the warmth and comfort you have given me. Darling [Name], this is a blessed day. All is well.</em></li>
+                           <li>Take a few more minutes to relax in your bed and think of all the things you are grateful for.</li>
+                           <li>When you’re ready to get up, go to the bathroom mirror. Look sweetly and deeply into your eyes. List the many things you are grateful for. Say them as affirmations: <em>I am grateful for my beautiful smile. I am grateful to feel perfectly healthy today. I am grateful for having a job to go to today. I am grateful for the friends I am going to meet today.</em></li>
+                           <li>Whenever you pass a mirror today, stop and say an affirmation for something you are grateful for in that moment.</li>
+                       </ol>
+
+                       <h3>The Power Is Within You: Your Day 19 Journaling Exercise</h3>
+                        <ol>
+                           <li>Feed your attitude of gratitude every day: start a gratitude journal. Write down at least one thing that you are grateful for. Write down everything you are grateful for. Write an affirmation for each thing you are grateful for, to use in your mirror work.</li>
+                           <li>Read inspiring stories about the power of gratitude. (My book <em>Gratitude: A Way of Life</em> contains contributions from 48 of the most inspiring people I know, and you can also find stories in <em>An Attitude of Gratitude: 21 Life Lessons</em> by Keith D. Harrell.) Write down an inspiring story of gratitude from your own experience or from the life of someone you know.</li>
+                       </ol>
+
+                       <h3>Your Heart Thought for Day 19: I Give and Receive Gifts Graciously</h3>
+                        <p>Deep at the center of my being, there is an infinite well of gratitude. I now allow this gratitude to fill my heart, my body, my mind, my consciousness, my very being. This gratitude radiates out from me in all directions, touching everything in my world, and returns to me as more to be grateful for. The more gratitude I feel, the more aware I am that the supply is endless.</p>
+                        <p>Appreciation and acceptance act like powerful magnets for miracles every moment of the day. Compliments are gifts of prosperity. I have learned to accept them graciously. If somebody compliments me, I smile and say, “Thank you.”</p>
+                        <p>Today is a sacred gift from life. I open my arms wide to receive the full measure of prosperity that the Universe offers. Any time of the day or night, I can let it in.</p>
+                        <p>The Universe supports me in every way possible. I live in a loving, abundant, harmonious Universe, and I am grateful. There are times in life, however, when the Universe gives to me but I am not in a position to do anything about giving back. I can think of many people who helped me enormously at times when there was no way I could ever repay them. Later, however, I was able to help others, and that’s the way life goes. I relax and rejoice in the abundance and gratitude that are here now.</p>
+                   </div>
+                </div>
+
+                <!-- Day 20 -->
+                <div class="day">
+                   <button class="day-toggle">Day 20: Teaching Mirror Work to Children</button>
+                   <div class="day-content">
+                        <h3>Your Day 20 Mirror Work Exercise</h3>
+                        <ol>
+                           <li>I would like you to watch a video of a sweet little girl doing her affirmations. It’s called “Jessica’s ‘Daily Affirmation,’” and you can see it at www.youtube.com/watch?v=qR3rK0kZFkg.</li>
+                           <li>Watch this video with your child or any child in your life, even with your inner child.</li>
+                           <li>Ask your child to do its own daily affirmations just as Jessica did in the video. Ask the child what it is happy about and have it tell that to the mirror.</li>
+                           <li>You can start this exercise by doing your own mirror work and inviting your child to join in. Say simple affirmations like: <em>I love you. I love everything about you. I am great! I am beautiful! I have cool hair! I can dance like a TV star!</em></li>
+                           <li>Schedule a time every day to do mirror work with your child, even if only for a few minutes in the morning.</li>
+                       </ol>
+
+                       <h3>The Power Is Within You: Your Day 20 Journaling Exercise</h3>
+                        <ol>
+                           <li>Begin today’s journaling exercise by reading a story excerpted from my book <em>The Adventures of Lulu</em>. You can access it by visiting www.louisehay.com/learning-mirror-work.</li>
+                           <li>Have drawing paper, colored pencils, colored markers, crayons, and glue ready, and ask your child to draw a Magic Mirror to go to, just as Lulu does in the book. Encourage the child to decorate the mirror: glue pretty pictures around it, add glitter and sparkles to the frame, cover it in a riot of color.</li>
+                           <li>With your child, take turns looking in the Magic Mirror and saying wonderful things about yourself.</li>
+                           <li>Write down the positive statements you and your child say, so you can repeat them when you do your morning mirror work together.</li>
+                       </ol>
+
+                       <h3>Your Heart Thought for Day 20: I Communicate Openly with My Children</h3>
+                        <p>It is vitally important to keep the lines of communication open with children, especially during the teen years. So often children are told things like <em>Don’t say that. Don’t do that. Don’t feel that. Don’t be that way. Don’t express that.</em> When all they hear is don’t, don’t, don’t, they stop communicating.</p>
+                        <p>Then, when the children are older, parents complain, “My children never call me.” Why don’t they call? Because the lines of communication have been cut, that’s why.</p>
+                        <p>When you are open with your children—using positive statements like “It’s okay to feel sad” and “You can talk to me about it”—and you encourage them to share their feelings, the lines of communication will be restored.</p>
+                   </div>
+                </div>
+
+                 <!-- Day 21 -->
+                 <div class="day">
+                     <button class="day-toggle">Day 21: Loving Yourself Now</button>
+                     <div class="day-content">
+                        <h3>Your Day 21 Mirror Play Exercise</h3>
+                         <ol>
+                            <li>Go to the mirror and look at the beautiful person looking back at you. Raise your arms and give yourself a big cheer for finishing this course. Say these affirmations: <em>I love you, darling. I really love you. You did it! You completed this course. I am so proud of you. You can do anything you set your mind to.</em></li>
+                            <li>Take time to express your gratitude for all the work you have done. Say these affirmations: <em>Thank you for hanging in there. Thank you for being open to learning something new. I really love you.</em></li>
+                            <li>Make a commitment to continue your mirror play. Say: <em>I will see you tomorrow, gorgeous. We will discuss other areas that I’d like to change. I love you. You are worth loving. You deserve only the best.</em></li>
+                        </ol>
+
+                        <h3>The Power Is Within You: Your Day 21 Journaling Exercise</h3>
+                         <ol>
+                            <li>Review your journal from the beginning of the course. Go through each lesson and congratulate yourself for all the work you have done.</li>
+                            <li>Write down the areas where you have progressed the most. Write down some of the problems areas where you could use more work.</li>
+                            <li>Go back and repeat the lessons in which you feel you need more guidance from your mirror.</li>
+                            <li>If you like, share your comments about this course on my Facebook page, www.facebook.com/louiselhay.</li>
+                            <li>Now go play with your inner child!</li>
+                        </ol>
+
+                        <h3>Your Heart Thought for Day 21: We Are All Part of the Harmonious Whole</h3>
+                         <p>Remember: you are part of a community of people all over the globe who are working to make this a better world. We have come together at this time because there is something we need to learn from one another. It is safe for us to work on loving ourselves so that we may benefit and grow from this experience. We choose to work together to create harmony in our relationships and in every area of our lives.</p>
+                         <p>Divine right action is guiding us every moment of the day. We say the right words at the right time and follow the right course of action at all times. Each person is part of the harmonious whole.</p>
+                         <p>There is a divine blending of energies as we work joyfully together, supporting and encouraging one another in ways that are fulfilling and productive. We are healthy, happy, loving, joyful, respectful, supportive, and at peace with ourselves and with one another. So be it, and so it is.</p>
+                    </div>
+                 </div>
+
+            </div><!-- End Week 3 Content -->
+        </div> <!-- End Week 3 -->
+
+    </div> <!-- End Container -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all week toggle buttons
+            const weekToggles = document.querySelectorAll('.week-toggle');
+
+            weekToggles.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Toggle active class on the button
+                    this.classList.toggle('active');
+
+                    // Get the next element sibling (the week-content div)
+                    const content = this.nextElementSibling;
+
+                    // Toggle display
+                    if (content.style.display === 'block') {
+                        content.style.display = 'none';
+                    } else {
+                        // Optional: Close other open weeks when one is opened
+                        // weekToggles.forEach(otherButton => {
+                        //     if (otherButton !== this) {
+                        //         otherButton.classList.remove('active');
+                        //         otherButton.nextElementSibling.style.display = 'none';
+                        //     }
+                        // });
+                        content.style.display = 'block';
+                    }
+                });
+            });
+
+            // Get all day toggle buttons
+            const dayToggles = document.querySelectorAll('.day-toggle');
+
+            dayToggles.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Toggle active class on the button
+                    this.classList.toggle('active');
+
+                    // Get the next element sibling (the day-content div)
+                    const content = this.nextElementSibling;
+
+                    // Toggle display
+                    if (content.style.display === 'block') {
+                        content.style.display = 'none';
+                    } else {
+                         // Optional: Close other open days within the same week when one is opened
+                        // const parentWeekContent = this.closest('.week-content');
+                        // if (parentWeekContent) {
+                        //     parentWeekContent.querySelectorAll('.day-toggle').forEach(otherButton => {
+                        //         if (otherButton !== this) {
+                        //             otherButton.classList.remove('active');
+                        //             otherButton.nextElementSibling.style.display = 'none';
+                        //         }
+                        //     });
+                        // }
+                        content.style.display = 'block';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
