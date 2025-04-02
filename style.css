@@ -1,0 +1,190 @@
+/* Basic Reset & Body Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: #5a3d8a; /* Purple tone */
+    margin-bottom: 10px;
+}
+
+.intro {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+/* Week Styling */
+.week {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden; /* Contain border-radius */
+}
+
+.week-toggle {
+    width: 100%;
+    background-color: #e7e7e7;
+    color: #5a3d8a;
+    border: none;
+    padding: 15px 20px;
+    text-align: left;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative; /* For pseudo-element */
+}
+
+.week-toggle:hover {
+    background-color: #dcdcdc;
+}
+
+.week-toggle::after {
+    content: '+'; /* Indicator */
+    position: absolute;
+    right: 20px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.week-toggle.active::after {
+    content: '−'; /* Change indicator when active */
+}
+
+
+.week-content {
+    display: none; /* Hidden by default */
+    padding: 0;
+    background-color: #fff;
+}
+
+/* Day Styling */
+.day {
+    border-top: 1px dashed #eee;
+    margin: 0;
+}
+.day:first-child {
+    border-top: none;
+}
+
+.day-toggle {
+    width: 100%;
+    background-color: #f8f8f8;
+    color: #444;
+    border: none;
+    padding: 12px 20px 12px 35px; /* Indent day toggle */
+    text-align: left;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+     position: relative; /* For pseudo-element */
+}
+
+.day-toggle:hover {
+    background-color: #efefef;
+}
+
+.day-toggle::after {
+    content: '+'; /* Indicator */
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: normal;
+    color: #888;
+    transition: transform 0.3s ease;
+}
+
+.day-toggle.active::after {
+    content: '−'; /* Change indicator when active */
+}
+
+.day-content {
+    display: none; /* Hidden by default */
+    padding: 15px 25px 20px 40px; /* Indent content */
+    border-top: 1px solid #eee;
+    background-color: #fff;
+}
+
+/* Exercise Content Styling */
+.day-content h3 {
+    color: #5a3d8a;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #eee;
+}
+.day-content h3:first-child {
+    margin-top: 0;
+}
+
+.day-content p,
+.day-content ol {
+    margin-bottom: 15px;
+}
+
+.day-content ol {
+    padding-left: 25px; /* Indent list items */
+}
+
+.day-content li {
+    margin-bottom: 8px;
+}
+
+.day-content em {
+    font-style: italic;
+    color: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+    h1 {
+        font-size: 1.8em;
+    }
+    .week-toggle {
+        padding: 12px 15px;
+        font-size: 1.1em;
+    }
+     .week-toggle::after {
+        right: 15px;
+    }
+    .day-toggle {
+        padding: 10px 15px 10px 25px;
+        font-size: 1em;
+    }
+     .day-toggle::after {
+        right: 15px;
+    }
+    .day-content {
+         padding: 15px 20px 15px 30px;
+    }
+    .day-content ol {
+        padding-left: 20px;
+    }
+}
